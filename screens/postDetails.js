@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const Post =()=>{
   return (
     <View style={styles.container}>
-      <Text>this is Post page</Text>
+      <Text>This is Post page</Text>
       <StatusBar style="auto" />
     </View>
   );

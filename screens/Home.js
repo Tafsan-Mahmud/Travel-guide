@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOp
 import { Feather } from '@expo/vector-icons';
 import { useState } from 'react';
 
-const Home = () => {
+const Home = ({navigation}) => {
     const imaget = { uri: "https://image.freepik.com/free-photo/low-angle-view-skyscrapers_1359-1105.jpg" }
     const recentImage = { uri: "https://www.komando.com/wp-content/uploads/2019/05/beach-vacation.jpg" }
 
@@ -23,6 +23,10 @@ const Home = () => {
         }
     ]);
 
+    const goToPost =()=>{
+        navigation.navigate('Post');
+    }
+
     return (
         <View style={{flexGrow:1, height:'100%'}}>
             <View>
@@ -33,7 +37,7 @@ const Home = () => {
                 >
                     <View style={styles.DarkOverlay}></View>
                     <View style={styles.searchContainer}>
-                        <Text style={styles.userGreet} >Hi Bijoy</Text>
+                        <Text style={styles.userGreet} >Travel Guide</Text>
                         <Text style={styles.userText}>Where would you like to go today?</Text>
                     </View>
                     <View>
@@ -61,7 +65,7 @@ const Home = () => {
                         renderItem={({ item }) => {
                             return (
                                 <View style={{ paddingVertical: 20, paddingLeft: 16 }}>
-                                    <TouchableOpacity>
+                                    <TouchableOpacity onPress={goToPost}>
                                         <Image source={item.image} style={{ width: 150, marginRight: 8, height: 250, borderRadius: 10 }} />
                                         <View style={styles.imageOverlay}></View>
                                         <Feather name='map-pin'size={16} color='white' style={styles.imageLocationIcon}/>
@@ -73,7 +77,7 @@ const Home = () => {
 
                     />
                 </View>
-                <View>
+                <View style={{marginBottom:60}}>
                     <View style={{padding: 20 , flexDirection:'row', justifyContent:'space-between'}}>
                         <Text style={{fontSize:22, fontWeight:'bold'}}>Recently Viewed</Text>
                         <Text style={{fontSize:14, fontWeight:'bold', color:'#ff6200'}}>View All</Text>
@@ -92,7 +96,7 @@ const Home = () => {
                         <Text style={{fontSize:20, color:'white',marginLeft:4, fontWeight:'normal' , marginBottom:10, marginHorizontal:10}}>Sea Bitch</Text>
                         </View>
                         <Text style={{fontSize:14, color:'white' , fontWeight:'normal',marginBottom:6 , opacity:0.8, marginLeft:16}}>
-                           Bangladesh,Cox's Bazar 
+                           Cox's Bazar, Bangladesh
                         </Text>
                     </View>
                 </View>

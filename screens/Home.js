@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Home = () => {
     const imaget = { uri: "https://image.freepik.com/free-photo/low-angle-view-skyscrapers_1359-1105.jpg" }
     const recentImage = { uri: "https://www.komando.com/wp-content/uploads/2019/05/beach-vacation.jpg" }
-
+console.log('hello');
     const [gallery, setGallery] = useState([
         {
             image: { uri: "https://traveology.com/wp-content/uploads/sites/7/2020/11/travel2.jpg" }, title: 'Switzerland', key: '1'

@@ -7,7 +7,6 @@ import { useState } from 'react';
 const Home = ({navigation}) => {
     const imaget = { uri: "https://image.freepik.com/free-photo/low-angle-view-skyscrapers_1359-1105.jpg" }
     const recentImage = { uri: "https://www.komando.com/wp-content/uploads/2019/05/beach-vacation.jpg" }
-
     const [gallery, setGallery] = useState([
         {
             image: { uri: "https://traveology.com/wp-content/uploads/sites/7/2020/11/travel2.jpg" }, title: 'Switzerland', key: '1'
@@ -56,7 +55,7 @@ const Home = ({navigation}) => {
 
             <ScrollView>
                 <View style={{ padding: 20 }}>
-                    <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Top Tranding</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold' }}>Top Trending</Text>
                 </View>
                 <View>
                     <FlatList

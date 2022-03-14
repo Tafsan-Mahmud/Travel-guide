@@ -46,7 +46,7 @@ const Home = ({navigation}) => {
                             placeholderTextColor='#666'
                         >
                         </TextInput>
-                        <Feather name='search' size={22} color='#666' style={{ position: 'absolute', top: 30, right: 60, opacity: 0.6 }} />
+                        <Feather name='search' size={22} color='#666' style={{ position: 'absolute', top: 25, right: 60, opacity: 0.6 }} />
                     </View>
                     <Feather name='menu' size={22} color='#fff' style={{ position: 'absolute', top: 40, left: 16 }} />
                     <Feather name='bell' size={22} color='#fff' style={{ position: 'absolute', top: 40, right: 30 }} />
